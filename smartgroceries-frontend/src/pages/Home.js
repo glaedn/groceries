@@ -7,30 +7,30 @@ const Home = () => {
   const [input, setInput] = useState("");
 
   useEffect(() => {
-    axios.get("http://localhost:5000/api/grocery")
+    axios.get("https://groceries-76di.onrender.com/api/grocery")
       .then(res => setItems(res.data.filter(item => item.isVisible !== false)))
       .catch(err => console.log(err));
   }, []);
 
   const addItem = () => {
-    axios.post("http://localhost:5000/api/grocery/add", { name: input })
+    axios.post("https://groceries-76di.onrender.com/api/grocery/add", { name: input })
       .then(res => setItems([...items, res.data]));
     setInput("");
   };
 
   const toggleWeekly = (id) => {
-    axios.put(`http://localhost:5000/api/grocery/weekly/${id}`)
+    axios.put(`https://groceries-76di.onrender.com/api/grocery/weekly/${id}`)
       .then(res => setItems(items.map(item => item._id === id ? res.data : item)));
   };
 
   const toggleCrossOff = (id) => {
-    axios.put(`http://localhost:5000/api/grocery/cross/${id}`)
+    axios.put(`https://groceries-76di.onrender.com/api/grocery/cross/${id}`)
       .then(res => setItems(items.map(item => item._id === id ? res.data : item)));
   };
 
   // Add weekly items not already on the list
   const addWeeklyItems = () => {
-    axios.put("http://localhost:5000/api/grocery/add-weekly")
+    axios.put("https://groceries-76di.onrender.com/api/grocery/add-weekly")
       .then(fetchItems) // Fetch updated list after API call
       .catch(err => console.log(err));
   };g
@@ -38,13 +38,13 @@ const Home = () => {
 
   // Clear crossed-off items
   const clearCrossedOffItems = () => {
-    axios.put("http://localhost:5000/api/grocery/clear-crossed")
+    axios.put("https://groceries-76di.onrender.com/api/grocery/clear-crossed")
       .then(fetchItems) // Fetch updated list after API call
       .catch(err => console.log(err));
   };
   
   const fetchItems = () => {
-    axios.get("http://localhost:5000/api/grocery")
+    axios.get("https://groceries-76di.onrender.com/api/grocery")
       .then(res => setItems(res.data.filter(item => item.isVisible !== false)))
       .catch(err => console.log(err));
   };
