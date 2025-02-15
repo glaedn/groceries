@@ -6,6 +6,7 @@ services:
     plan: free
     buildCommand: npm install
     startCommand: node server.js  # Update this if your entry file is different
+    rootDirectory: ./backend
     envVars:
       - key: MONGO_URI
         sync: false  # Add this manually in Render's dashboard for security
