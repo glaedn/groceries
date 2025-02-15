@@ -1,0 +1,150 @@
+/* styles.css */
+
+/* Container for the entire grocery app */
+.grocery-container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 1.5rem;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .grocery-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-align: center;
+    color: #333;
+    margin-bottom: 1rem;
+  }
+  
+  /* Input and Button container */
+  .input-container {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1rem;
+  }
+  
+  .input-field {
+    border: 1px solid #ddd;
+    padding: 0.5rem;
+    flex-grow: 1;
+    border-radius: 4px;
+    outline: none;
+    transition: border-color 0.2s;
+  }
+  
+  .input-field:focus {
+    border-color: #4CAF50;
+  }
+  
+  .add-button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+  }
+  
+  .add-button:hover {
+    background-color: #45a049;
+  }
+  
+  /* Grocery List Styles */
+  .grocery-list {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .grocery-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    background-color: #f9f9f9;
+    border-radius: 4px;
+    margin-bottom: 0.5rem;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  }
+  
+  .grocery-item-name {
+    cursor: pointer;
+  }
+  
+  .grocery-item-name.completed {
+    text-decoration: line-through;
+    color: gray;
+  }
+  
+  .weekly-button {
+    padding: 0.5rem 1rem;
+    font-size: 0.875rem;
+    font-weight: 600;
+    border-radius: 4px;
+    transition: background-color 0.2s;
+  }
+  
+  .weekly-button.weekly {
+    background-color: #4CAF50;
+    color: white;
+  }
+  
+  .weekly-button:not(.weekly) {
+    background-color: #ccc;
+    color: #333;
+  }
+  
+  .weekly-button:hover {
+    opacity: 0.75;
+  }
+  
+  /* Action Buttons */
+  .action-buttons {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1.5rem;
+  }
+  
+  .start-shopping-button {
+    background-color: #FFEB3B;
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    flex-grow: 1;
+    cursor: pointer;
+    transition: background-color 0.2s;
+  }
+  
+  .start-shopping-button:hover {
+    background-color: #FF9800;
+  }
+  
+  .clear-button {
+    background-color: #F44336;
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    flex-grow: 1;
+    cursor: pointer;
+    transition: background-color 0.2s;
+  }
+  
+  .clear-button:hover {
+    background-color: #E53935;
+  }
+   
+  /* Add Weekly Button */
+  .add-weekly-button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    flex-grow: 1;
+    cursor: pointer;
+    transition: background-color 0.2s;
+  }
+  
+  .add-weekly-button:hover {
+    background-color: #45a049;
+  }
