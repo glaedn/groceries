@@ -33,7 +33,7 @@ const Home = () => {
     axios.put("https://groceries-76di.onrender.com/api/grocery/add-weekly")
       .then(fetchItems) // Fetch updated list after API call
       .catch(err => console.log(err));
-  };g
+  };
   
 
   // Clear crossed-off items
