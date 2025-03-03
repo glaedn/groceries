@@ -1,6 +1,6 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "Tharp Groceries",
+  "name": "Groceries app for the Tharp family",
   "icons": [
     {
       "src": "favicon.ico",
